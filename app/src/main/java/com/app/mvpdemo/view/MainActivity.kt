@@ -9,7 +9,7 @@ import com.app.mvpdemo.contract.CatContract
 import com.app.mvpdemo.databinding.ActivityMainBinding
 import com.app.mvpdemo.presenter.CatPresenter
 
-class MainActivity : AppCompatActivity() , CatContract.View{
+class MainActivity : AppCompatActivity() , CatContract.View {
     private lateinit var binding: ActivityMainBinding
 
     private lateinit var catPresenter : CatPresenter

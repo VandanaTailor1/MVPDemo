@@ -17,8 +17,7 @@ class CatPresenter(val view : CatContract.View) : CatContract.CatPresenter {
         apiService.getCatData().enqueue(object : Callback<CatResponse>{
             override fun onResponse(call: Call<CatResponse>, response: Response<CatResponse>) {
                 view.hideLoading()
-//                p1.body()?.let { view.onSuccess("Cat", it) }
-                view.onSuccess("Cat",call)
+                view.onSuccess("Cat",response)
             }
 
             override fun onFailure(p0: Call<CatResponse>, p1: Throwable) {
